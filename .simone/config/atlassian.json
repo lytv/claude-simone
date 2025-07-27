@@ -1,0 +1,63 @@
+{
+  "jira": {
+    "projectKey": "SL",
+    "projectName": "Simone AI Project Management",
+    "projectType": "software",
+    "epicIssueType": "Epic",
+    "taskIssueType": "Task",
+    "storyIssueType": "Story",
+    "bugIssueType": "Bug",
+    "subtaskIssueType": "Sub-task",
+    "priorityMapping": {
+      "critical": "Highest",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "statusMapping": {
+      "todo": "To Do",
+      "in_progress": "In Progress",
+      "review": "In Review",
+      "testing": "Testing",
+      "done": "Done"
+    },
+    "baseUrl": "https://truongvanly.atlassian.net",
+    "apiToken": "YOUR_JIRA_API_TOKEN"
+  },
+  "confluence": {
+    "spaceKey": "SIMONE",
+    "spaceName": "Simone Project Documentation",
+    "spaceDescription": "AI-driven project management documentation and collaboration space",
+    "baseUrl": "https://truongvanly.atlassian.net/wiki",
+    "apiToken": "YOUR_CONFLUENCE_API_TOKEN"
+  },
+  "sync": {
+    "autoSync": true,
+    "syncInterval": "30m",
+    "bidirectional": true,
+    "conflictResolution": "latest_wins",
+    "retryAttempts": 3,
+    "retryDelay": 1000
+  },
+  "mapping": {
+    "milestone": {
+      "prefix": "M",
+      "jiraEpicTemplate": "SIMONE-{number}: {title}",
+      "confluencePageTemplate": "M{number} - {title}"
+    },
+    "sprint": {
+      "prefix": "S",
+      "jiraSprintTemplate": "Sprint {number}: {title}",
+      "confluencePageTemplate": "S{number} - {title}"
+    },
+    "task": {
+      "prefix": "T",
+      "jiraIssueTemplate": "SIMONE-{number}: {title}",
+      "confluencePageTemplate": "Task {number}: {title}"
+    }
+  },
+  "credentials": {
+    "email": "ly.truong.dn@gmail.com",
+    "cloudId": "truongvanly"
+  }
+}
